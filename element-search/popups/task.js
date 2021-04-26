@@ -5,6 +5,8 @@ const close = document.getElementsByClassName("modal__close modal__close_times")
 const success1 = document.getElementsByClassName("btn btn_danger modal__close show-success");
 const success2 = document.getElementById("modal_success");
 
+modal_main.classList.add("modal_active");
+
 let arr1 = Array.from(close);
 let elementClose = arr1[0];
 
