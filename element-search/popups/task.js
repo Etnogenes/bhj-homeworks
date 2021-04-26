@@ -1,4 +1,4 @@
-"use strcit";
+"use strict";
 
 const modal_main = document.getElementById("modal_main");
 const close = document.getElementsByClassName("modal__close modal__close_times");
@@ -23,5 +23,3 @@ const letSuccess = function() {
 }
 
 elementSuccess.onclick = letSuccess;
-
-
