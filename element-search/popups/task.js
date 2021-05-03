@@ -8,20 +8,24 @@ const success2 = document.getElementById("modal_success");
 modal_main.classList.add("modal_active");
 
 let arr1 = Array.from(close);
-let elementClose = arr1[0];
+//let elementClose = arr1[0];
 
 const letClose = function() {
 	modal_main.classList.remove("modal_active");
 	success2.classList.remove("modal_active");
 }
 
-elementClose.onclick = letClose;
+//elementClose.onclick = letClose;
+arr1[0].addEventListener("click", letClose);
+arr1[1].addEventListener("click", letClose);
+
 
 let arr2 = Array.from(success1);
 let elementSuccess = arr2[0];
 
 const letSuccess = function() {
 	success2.classList.add("modal_active");
+	modal_main.classList.remove("modal_active");
 }
 
 elementSuccess.onclick = letSuccess;
