@@ -1,28 +1,26 @@
 "use strict";
 
 const menu_main = document.getElementsByClassName("menu menu_main");
-const menu__item = document.getElementsByClassName("menu__item");
-const menu__link = document.getElementsByClassName("menu__link");
-const menu_sub = document.getElementsByClassName("menu menu_sub");
+const menu__item = document.querySelectorAll("ul.menu menu_main li");
+const menu__link = document.querySelectorAll("li.menu__item a");
+const menu_sub = document.querySelectorAll("li.menu__item ul");
 
 
-let arr1 = Array.from(menu__link);
-let elementMenu__link;
+let arr1 = Array.from(menu__item);
+let arr2 = Array.from(menu__link);
+let arr3 = Array.from(menu_sub);
 
-for (let i = 0; i <= arr1.length; i++) {
-	elementMenu__link = arr1[i];
-}
+let elementMenu__link = arr2[1];
 
-const show_menu = function() {
-	menu_sub.classList.add("menu_active");
-	return false;
+for (let i = 0; i <= arr2.length; i++) {
+	if (menu__item.closest("ul") == true) {
+		const show_menu = function() {
+			menu_sub.classList.toggle("menu_active");
+			return false;
+		}
+	}
 }
 
 
 elementMenu__link.onclick = show_menu;
-
-
-
-
-
 
