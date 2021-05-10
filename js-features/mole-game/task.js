@@ -10,7 +10,7 @@ let arr1 = Array.from(hole);
 
 for(let i = 0; i <= arr1.length; i++) {
 
-	hole[i].onclick = function(click) {
+	arr1[i].onclick = function(click) {
 		if (arr1[i].className.includes("hole_has-mole")) {
 			dead.textContent ++;
 		} else if (arr1[i].classList.contains("hole_has-mole") == false) {
