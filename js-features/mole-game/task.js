@@ -15,7 +15,7 @@ if (dead.textContent == 10) {
 	dead.textContent == 0;
 }
 
-for(let i = 0; i <= arr1.length; i++) {
+for(let i = 0; i <= 8; i++) {
 
 	arr1[i].onclick = function(click) {
 		if (arr1[i].className.includes("hole_has-mole")) {
