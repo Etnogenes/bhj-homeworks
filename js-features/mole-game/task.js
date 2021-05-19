@@ -7,14 +7,6 @@ const lost = document.getElementById("lost");
 
 let arr1 = Array.from(hole);
 
-if (dead.textContent == 10) {
-	alert("Вы выиграли?");
-	dead.textContent == 0;
-} else if (lost.textContent == 5) {
-	alert("Вы проиграли!");
-	dead.textContent == 0;
-}
-
 for(let i = 0; i <= 8; i++) {
 
 	arr1[i].onclick = function(click) {
@@ -22,6 +14,15 @@ for(let i = 0; i <= 8; i++) {
 			dead.textContent ++;
 		} else if (arr1[i].classList.contains("hole_has-mole") == false) {
 			lost.textContent ++;
+		}
+		if (dead.textContent == 10) {
+			alert("Вы выиграли?");
+			lost.textContent = 0;
+			dead.textContent = 0;
+		} else if (lost.textContent == 5) {
+			alert("Вы проиграли!");
+			dead.textContent = 0;
+			lost.textContent = 0;
 		}
 	}
 }
