@@ -12,7 +12,7 @@ let arrItem = Array.from(menuItem);
 for (let i = 0; i < arrLink.length; i++) {
 	arrLink[i].onclick = function(click) {
 		if (arrLink[i].closest(".menu__item") && arrItem[i].contains(arrSub[i])) {
-			this.closest(".menu__item").contains(arrSub[0].className.toggle("menu_active"));
+			this.closest(".menu__item").contains(arrSub[i].classList.toggle("menu_active"));
 		}
 		return false;
 	}
