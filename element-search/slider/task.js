@@ -21,7 +21,7 @@ arrItem[valueSlide].classList.add("slider__item_active");
 
 const switchArrow = function() {
 	//найти позицию активного слайда
-	let result = arrItem.findIndex(item => item.className == "slider__item slider__item_active") < arrItem.length ? (arrItem.findIndex(item => item.className == "slider__item slider__item_active") + 1) : 0;
+	let result = (arrItem.findIndex(item => item.className == "slider__item slider__item_active") + 1) < arrItem.length ? (arrItem.findIndex(item => item.className == "slider__item slider__item_active") + 1) : valueSlide;
 
 	//вызов функции
 	switchSlide(result);
